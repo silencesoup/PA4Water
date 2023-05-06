@@ -1,0 +1,15 @@
+name: PA
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - langchain
+  - pypdf
+  # a required package for chromadb, always error when using pip to install it
+  - hnswlib
+  - pip
+  - pip:
+    - gradio
+    - chromadb
+    - openai
+    - tiktoken
