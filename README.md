@@ -1,7 +1,7 @@
 <!--
  * @Author: Wenyu Ouyang
  * @Date: 2023-05-06 08:25:20
- * @LastEditTime: 2023-05-06 11:47:48
+ * @LastEditTime: 2023-05-07 11:16:59
  * @LastEditors: Wenyu Ouyang
  * @Description: Try to build a personal assistant for water science and engineering
  * @FilePath: \PA4Water\README.md
@@ -25,7 +25,7 @@ More work is still in progress and need more guys to join us.
 
 The following technologies are used now but not fully explored jet:
 
-- LangChain: a powerful tool for working with Large Language Models
+- LangChain: a powerful tool for working with Large Language Models, for more information, please refer to [this blog](https://towardsdatascience.com/a-gentle-intro-to-chaining-llms-agents-and-utils-via-langchain-16cd385fca81)
 - Gradio: quickly build a web interface
 
 ## Install
@@ -50,4 +50,23 @@ Open a terminal and activate the environment you created in the previous step. T
 ```bash
 conda activate PA
 python pdf_summarization_app.py
+```
+
+## Development
+
+If you want to develop this project and use VSCode as you editor, you can add a .env file in root directory and add the following content in it:
+
+```bash
+PYTHONPATH=./pa4water:./tests:${PYTHONPATH}
+```
+
+Then set environment variables in the ".vscode/setting.json" file.
+
+```json
+{
+    "terminal.integrated.env.linux": { "PYTHONPATH": "${workspaceFolder}"},
+    "terminal.integrated.env.windows": { "PYTHONPATH": "${workspaceFolder}"},
+    "terminal.integrated.env.osx": { "PYTHONPATH": "${workspaceFolder}"},
+    "python.envFile": "${workspaceFolder}/.env",
+}
 ```

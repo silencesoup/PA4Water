@@ -7,6 +7,10 @@ dependencies:
   - pypdf
   # a required package for chromadb, always error when using pip to install it
   - hnswlib
+  # for development
+  - pytest
+  - black
+  # pip install
   - pip
   - pip:
     - gradio
